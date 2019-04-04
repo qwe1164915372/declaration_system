@@ -1,0 +1,18 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/template/template",
+    "pages/customized/modal/modal",
+    "pages/colonel/colonel",
+    "pages/member/member",
+    "pages/group_buying_new/group_buying_new",
+    "pages/group_buying_management/group_buying_management",
+    "pages/order_management/order_management"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  }
+}

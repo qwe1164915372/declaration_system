@@ -1,0 +1,23 @@
+<view hidden='{{modalHidden}}' class="dialog-modal" catchtouchmove='moveD'>
+  <view class='mask_layer' />
+  <view class='modal_box'>
+    <form bindsubmit="modal_confirm">
+      <view class='modal-body'>
+        <view class="modal-title">
+          <input name='spot_name' placeholder='自提点简称' value='{{spot_name}}'></input>
+        </view>
+        <view class="modal-title">
+          <input name='daiding' placeholder='地图标记' value='{{daiding}}'></input>
+        </view>
+        <view class="modal-title">
+          <input name='address' placeholder='请填写详细地址' value='{{address}}'></input>
+        </view>
+      </view>
+      <view class='modal-btn'>
+        <button class='modal-cancel'  bindtap='modal_cancel'>取消</button>
+        <button class='modal-confirm' form-type="submit">确定</button>
+      </view>
+    </form>
+  </view>
+
+</view>

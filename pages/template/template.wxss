@@ -1,0 +1,132 @@
+/* pages/template/template.wxss */
+
+.function_frame {
+  width: 75px;
+  display: flex;
+  flex-direction: column;
+}
+.function_frame .function_icon {
+  width: 75px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.function_frame .function_icon .function_icon_img {
+  width: 60%;
+  height: 60%;
+}
+.function_frame .function_description {
+  width: 75px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.function_description text {
+  font-size: 0.8em;
+}
+
+.goods{
+  background: white;
+  border: 1px solid white;
+}
+.goods .section1{
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px;
+}
+.goods .section1 .delete_goods{
+  width: 20px;
+  height: 20px;
+}
+.goods .section1 .delete_goods image{
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.goods .section2{
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.goods .section2 .section{
+  border: 1px solid #E6E6FA;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px; 
+}
+.goods .section2 .section .tip{
+  width: 30%;
+  font-size: 0.8em;
+  /* color: #242424; */
+  color: blue;
+  padding: 5px;
+}
+.goods .section2 .section .get_in{
+  width: 70%;
+  font-size: 0.8em;
+  /* color: #242424; */
+  color: blue;
+  padding: 5px;
+}
+
+.goods .section3{
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+}
+.goods .section3 .section_one{
+  width: 30%;
+  display: flex;
+  font-size: 0.8em;
+  /* color: #242424; */
+  color: blue;
+  padding: 5px;
+}
+.goods .section3 .section_two{
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 0.7em;
+  /* color: #242424; */
+  color: blue;
+  padding: 5px;
+}
+.goods .section3 .section_two .section_goodspic{
+  padding: 10px;
+}
+.goods .section4{
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.goods .section4 .section{
+  border: 1px solid #E6E6FA;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px; 
+}
+.goods .section4 .section .tip{
+  width: 30%;
+  font-size: 0.8em;
+  color: blue;
+  padding: 5px;
+}
+.goods .section4 .section .get_in{
+  width: 70%;
+  font-size: 0.8em;
+  color: blue;
+  padding: 5px;
+}
+.goods .section4 .section .get_in textarea{
+  display: block;
+  width: 100%;
+}
+
+
+

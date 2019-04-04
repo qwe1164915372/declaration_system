@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="colonel_or_member">
+    <view class="colonel">
+      <navigator url='../colonel/colonel'>我是团长</navigator>
+    </view>
+    <view class='member'>
+      <navigator url='../member/member'>我是团员</navigator>
+    </view>
+
+    <!-- 进入测试页面 -->
+    <view class='member'>
+      <navigator url='../customized/modal/modal'>进入测试页面</navigator>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,22 @@
+<!--pages/colonel/colonel.wxml-->
+<import src='../template/template.wxml'/>
+<view class='low_container'>
+  <view class='personal_information'>
+    <view class='head_icon'>
+      <open-data type='userAvatarUrl' class='avatarurl'></open-data>
+    </view>
+    <view class='head_icon_right'>
+      <open-data type='userNickName' class='wechat_name'></open-data>
+      <view class='wechat_name_bottom'>请完善信息，让成员更了解你</view>
+    </view>
+  </view>
+  <view class='transaction_information'>
+    模块2
+  </view>
+  <view class='colonel_function'>
+    <view wx:for="{{colonel_function}}" wx:key="unique">
+      <template is='colonel_function_copy' data='{{item}}' />
+    </view>
+  </view>
+
+</view>

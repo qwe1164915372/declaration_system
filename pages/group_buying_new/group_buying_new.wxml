@@ -1,0 +1,173 @@
+<!--pages/group_buying_new/group_buying_new.wxml-->
+<import src='../template/template.wxml' />
+<view class='low_container'>
+  <view class='top_guide'>
+    <view class='navbar'>
+      <view class="ele{{currentTab==index?'chosen':''}}" wx:for="{{navbar}}" data-idx="{{index}}" bindtap='navbarTap'>{{item}}</view>
+    </view>
+  </view>
+
+
+  <view class="xml{{currentTab==0?'chosen':''}}">
+    tab1
+    <form bindsubmit='create_group_buying' bindreset='reset_group_buying'>
+      <view class='table'>
+        <view class='title_announcement'>
+          <view class='section'>
+            <view class='tip'>
+              <text>团购标题*</text>
+            </view>
+            <view class='get_in'>
+              <input name='group_title'></input>
+            </view>
+          </view>
+          <view class='section'>
+            <view class='tip'>
+              <text>团购公告</text>
+            </view>
+            <view class='get_in'>
+              <input name='group_announcement'></input>
+            </view>
+          </view>
+        </view>
+        <view class='enroll_pay'>
+          <view class='des'>
+            团员报名方式
+          </view>
+          <radio-group name='enroll_pay'>
+            <view class='section'>
+              <view class='get_in'>
+                <radio value='报名' checked='true'>报名</radio>
+              </view>
+              <view class='tip'>
+                <text>选择报名方式，则</text>
+              </view>
+            </view>
+            <view class='section'>
+              <view class='get_in'>
+                <radio value='支付'>支付</radio>
+              </view>
+              <view class='tip'>
+                <text>选择报名方式，则</text>
+              </view>
+            </view>
+          </radio-group>
+        </view>
+        <view class='goods_area'>
+          <view class='add_goods_button' bindtap='add_goodsgroup'>
+            <view class='theicon'>
+              <image src='../../imgs/4.jpg'></image>
+            </view>
+            <view class='tip'>
+              <view class='tip_divide'>
+                <text>添加</text>
+              </view>
+              <view class='tip_divide'>
+                <text>商品</text>
+              </view>
+            </view>
+          </view>
+          <view class='all_goods'>
+            <view class='add_goods' wx:for="{{all_goods}}" wx:for-item="goodsgroup_item">
+              <template is="add_goods_copy" data="{{goodsgroup_item}}" />
+            </view>
+          </view>
+        </view>
+        <view class='button_submit'>
+          <view class='create'>
+            <button form-type='reset'>重置</button>
+          </view>
+          <view class='resetting'>
+            <button form-type='submit'>新建团购</button>
+          </view>
+        </view>
+      </view>
+    </form>
+  </view>
+
+
+  <view class="xml{{currentTab==1?'chosen':''}}">
+    tab2
+    <form bindsubmit='save_advanced' bindreset='bindReset'>
+      <view class='advanced_setting'>
+        <view class='xmlsetting'>
+          <checkbox-group name='xmlsetting'>
+            <view class='section'>
+              <checkbox checked='true' value='1'>在店铺首页显示</checkbox>
+            </view>
+            <view class='section'>
+              <checkbox checked='true' value='2'>团员参团时显示商品销量</checkbox>
+            </view>
+          </checkbox-group>
+        </view>
+        <view class='mandatory_field'>
+          <view class='des'>
+            团员参团必填项
+          </view>
+          <checkbox-group name='mandatory_field'>
+            <view class='section'>
+              <checkbox checked='true' value='1'>姓名</checkbox>
+            </view>
+            <view class='section'>
+              <checkbox checked='true' value='2'>手机号</checkbox>
+            </view>
+            <view class='section'>
+              <checkbox value='3'>微信号</checkbox>
+            </view>
+          </checkbox-group>
+        </view>
+        <view class='pickup_way'>
+          <view class='des'>
+            团员取货方式
+          </view>
+          <radio-group name='pickup_way'>
+            <view class='section1'>
+              <view class='get_in'>
+                <radio checked='true' value='1'>送货上门</radio>
+              </view>
+              <view class='tip'>
+                <text>选择后团员参团必须填写收货地址</text>
+              </view>
+            </view>
+            <view class='section2'>
+              <view class='collect_goods'>
+                <view class='get_in'>
+                  <radio value='2'>团员自提</radio>
+                </view>
+                <view class='add_collectgoods_spot'>
+                  <!-- <modal bind:action="save_spot" bind:confirmEvent="modal_confirm" modal-hidden="{{modal.hidden}}"></modal> -->
+                  <view class='tip' bindtap='add_spot'>
+                    <text>添加自提点</text>
+                  </view>
+                </view>
+              </view>
+              <view class='collect_spots'>
+                <checkbox-group>
+                  <view class='section' wx:for="{{collect_spots}}" wx:for-item="spot_item" wx:for-index="spot_index" data-spot_id='{{spot_index}}' bindtap='getspot_index'>
+                    <view class='get_in'>
+                      <checkbox>{{spot_item.spot_name}}</checkbox>
+                    </view>
+                    <view class='tip'>
+                      <view class='spot_alter_icon' bindtap='alter_spot' data-spot_id='{{spot_index}}'>
+                        <image src='../../imgs/1.png'></image>
+                      </view>
+                      <view class='spot_delete_icon' bindtap='delete_spot' data-spot_id='{{spot_index}}'>
+                        <image src='../../imgs/2.png'></image>
+                      </view>
+                    </view>
+                  </view>
+                </checkbox-group>
+              </view>
+            </view>
+          </radio-group>
+        </view>
+        <view class='save'>
+          <button form-type='submit'>保存</button>
+        </view>
+
+      </view>
+    </form>
+  </view>
+
+  <modal id='modal' bind:action="save_spot" modal-hidden="{{modal.hidden}}"></modal>
+</view>

@@ -1,0 +1,85 @@
+<!--pages/template/template.wxml-->
+<template name='colonel_function_copy'>
+  <navigator url='{{item.toUrl}}'>
+    <view class='function_frame'>
+      <view class='function_icon'>
+        <image class='function_icon_img' src='{{item.function_icon}}'></image>
+      </view>
+      <view class='function_description'>
+        <text>{{item.function_description}}</text>
+      </view>
+    </view>
+  </navigator>
+</template>
+
+<template name='add_goods_copy'>
+  <view class='goods' data-goodsgroup_id='{{goodsgroup_item.goodsgroup_index}}' bindtap='getgroup_index'>
+    <view class='section1'>
+      <view class='delete_goods'>
+        <image src='../../imgs/2.png' bindtap='delete_goodsgroup'></image>
+      </view>
+    </view>
+    <view class='section2'>
+      <view class='section'>
+        <view class='tip'>
+          <text>商品标题*</text>
+        </view>
+        <view class='get_in'>
+          <input placeholder='请输入商品标题' bindinput='name_input' value='{{goodsgroup_item.goods_name}}'></input>
+        </view>
+      </view>
+      <view class='section'>
+        <view class='tip'>
+          <text>商品单价*</text>
+        </view>
+        <view class='get_in'>
+          <input placeholder='￥' bindinput='price_input' value='{{goodsgroup_item.goods_price}}'></input>
+        </view>
+      </view>
+      <view class='section'>
+        <view class='tip'>
+          <text>商品库存*</text>
+        </view>
+        <view class='get_in'>
+          <input placeholder='请输入商品库存' bindinput='stock_input' value='{{goodsgroup_item.goods_stock}}'></input>
+        </view>
+      </view>
+    </view>
+    <view class='section3'>
+      <view class='section_one'>
+        <view class='tip'>
+          <text>商品图*</text>
+        </view>
+      </view>
+      <view class='section_two'>
+        <view class='section_goodspic' wx:for="{{goodsgroup_item.picture}}" wx:for-item="img_item" wx:for-index="img_index" wx:if="{{img_index<4}}">
+          <image src='{{img_item.pic_url}}' class="goods_img{{img_index==3?_none:''}}" bindtap="{{img_item.pic_function}}" style="width:{{img_item.goodspic_width}}px;height:{{img_item.goodspic_height}}px;" data-img_id='{{img_index}}'></image>
+        </view>
+        <view>
+          <text>最少添加1张图，最多添加4张图~</text>
+        </view>
+      </view>
+    </view>
+    <view class='section4'>
+      <view class='section'>
+        <view class='tip'>
+          <text>添加描述</text>
+        </view>
+        <view class='get_in'>
+          <textarea placeholder='备注价格的单位，商品的具体介绍等' auto-height='true' maxlength='-1' bindinput='des_input' value='{{goodsgroup_item.goods_description}}'></textarea>
+        </view>
+      </view>
+    </view>
+    <view class='section5'>
+
+    </view>
+  </view>
+</template>
+
+
+
+<view>
+  <rich-text>
+    <textarea placeholder='shuru' auto-height='true'></textarea>
+  </rich-text>
+</view>

@@ -1,0 +1,12 @@
+/**index.wxss**/
+
+.colonel{
+  font-size: 2em;
+  margin: 20px;
+  background-color: yellow;
+}
+.member{
+  font-size: 2em;
+  margin: 20px;
+  background-color: blue;
+}

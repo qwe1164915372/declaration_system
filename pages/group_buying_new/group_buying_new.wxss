@@ -1,0 +1,230 @@
+/* pages/group_buying_new/group_buying_new.wxss */
+@import '../template/template.wxss';
+/* .low_container{
+  z-index: 1;
+} */
+.top_guide .navbar{
+  display: flex;
+  justify-content: space-around;
+}
+.top_guide .navbar .elechosen{
+  color: blue;
+  border-bottom: 1px solid blue;
+}
+
+.xml{
+  display: none;
+}
+
+.table{
+  border: 1px solid red;
+}
+
+.title_announcement{
+  margin: 10px;
+  background: white;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+.title_announcement .section{
+  margin: 10px;
+}
+.title_announcement .section .tip{
+  padding: 5px;
+}
+.title_announcement .section .get_in{
+  padding: 1px;
+  border: 1px solid #E6E6FA;
+  border-radius: 3px;
+  font-size: 0.8em;
+}
+
+.enroll_pay{
+  margin: 10px;
+  background: white;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+.enroll_pay .des{
+  margin: 10px;
+}
+.enroll_pay .section{
+  margin: 10px;
+}
+.enroll_pay .section .tip{
+  padding: 5px;
+  font-size: 0.7em;
+}
+.enroll_pay .section .get_in{
+  padding: 1px;
+}
+
+.goods_area{
+  margin: 10px;
+  background: white;
+  border-radius: 5px;
+  /* border: 1px solid white; */
+}
+.goods_area .add_goods_button{
+  width: 10%;
+  background-color: green;
+  padding: 5px;
+  border-radius: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  left: 5%;
+  bottom: 15%;
+}
+.goods_area .add_goods_button .theicon{
+  width: 100%;
+}
+.goods_area .add_goods_button .theicon image{
+  width: 100%;
+  height: 37.5px;
+  border-radius: 50%;
+}
+.goods_area .add_goods_button .tip{
+  font-size: 0.8em;
+}
+.goods_area .all_goods{
+  display: flex;
+  flex-direction: column;
+  background-color: #CCCCCC;
+}
+.goods_area .all_goods .add_goods{
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border:  0.5px solid white;
+}
+.table .button_submit{
+  margin: 50px 10px 10px 10px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  /* 最好改成fixed */
+  /* 最好改成fixed */
+  bottom: 5%;
+}
+.table .button_submit .create{
+  width: 50%;
+}
+.table .button_submit .resetting{
+  width: 50%;
+}
+
+
+.advanced_setting{
+  border: 1px solid red;
+}
+.xmlsetting{
+  margin: 10px;
+  background: white;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+.xmlsetting .section{
+  margin: 10px;
+  font-size: 0.8em;
+}
+.mandatory_field{
+  margin: 10px;
+  background: white;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+.mandatory_field .des{
+  margin: 10px;
+}
+.mandatory_field .section{
+  margin: 10px;
+  font-size: 0.8em;
+}
+.pickup_way{
+  margin: 10px;
+  background: white;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+.pickup_way .des{
+  margin: 10px;
+}
+.pickup_way .section1{
+  margin: 10px;
+}
+.pickup_way .section1 .get_in{
+  font-size: 0.9em;
+  padding: 1px;
+}
+.pickup_way .section1 .tip{
+  font-size: 0.7em;
+  padding: 5px;
+}
+.pickup_way .section2{
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.pickup_way .section2 .collect_goods{
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between
+}
+.pickup_way .section2 .collect_goods .get_in{
+  font-size: 0.9em;
+  padding: 1px;
+}
+.pickup_way .section2 .collect_goods .add_collectgoods_spot{
+  padding: 1px;
+}
+.pickup_way .section2 .collect_goods .add_collectgoods_spot .tip{
+  color: blue;
+  font-size: 0.9em;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.pickup_way .section2 .collect_spots{
+  display: flex;
+  flex-direction: column;
+  background-color: #CCCCCC;
+  border-radius: 5px;
+}
+.pickup_way .section2 .collect_spots .section{
+  margin: 10px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.pickup_way .section2 .collect_spots .section .get_in{
+  width: 70%;
+}
+.pickup_way .section2 .collect_spots .section .tip{
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.pickup_way .section2 .collect_spots .section .tip .spot_alter_icon{
+  width: 20px; height: 20px;
+}
+.pickup_way .section2 .collect_spots .section .tip .spot_alter_icon image{
+  width: 20px; height: 20px;
+}
+.pickup_way .section2 .collect_spots .section .tip .spot_delete_icon{
+  width: 20px; height: 20px;
+}
+.pickup_way .section2 .collect_spots .section .tip .spot_delete_icon image{
+  width: 20px; height: 20px;
+}
+.advanced_setting .save{
+  margin: 10px;
+  /* display: flex;
+  flex-direction: row; */
+  position: relative;
+  /* 最好改成fixed */
+  /* 最好改成fixed */
+  bottom: 5%;
+}
+
